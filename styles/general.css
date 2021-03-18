@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 10px solid #1C5713;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #1C5713;
+  letter-spacing: 0.15em;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 105px;
+}
+
+.header__logo, .list__item,
+.header__shopping-cart-button,
+.header__user-avatar {
+  cursor: pointer;
+}
+
+.header__logo {
+  position: relative;
+  top: 5px;
+  left: 25px;
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  padding: 10px;
+  border: 2px solid #1C5713;
+  font-size: 48px;
+  line-height: 59px;
+  width: 194px;
+  height: 79px;
+}
+
+.menu {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu__list {
+  display: inline-flex;
+}
+
+.list__item {
+  padding: 5px 0;
+  font-size: 18px;
+  line-height: 22px;
+  list-style-type: none;
+  position: relative;
+  margin: 0 60px;
+  transition: .25s ease;
+}
+
+.list__item::after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  background: #1C5713;
+  transition: .25s linear;
+  margin-top: 10px;
+}
+.list__item:hover::after {
+  width: 100%;
+}
+
+.list__item a {
+  text-decoration: none;
+  color: #1C5713;
+} 
+
+.list-item--active::after{
+  content: '';
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 100%;
+  background: #1C5713;
+  margin-top: 10px;
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__shopping-cart-button {
+  background-color: #fff;
+  border: 0;
+  width: 32px;
+  height: 32px;
+  margin: 45px;
+}
+
+.header__user-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 45px;
+  background:linear-gradient(90deg, #1f5742 0%,#373b44 100% );
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  user-select: none;
+}
+
+.icon {
+  transition: .5s ease;
+  will-change: transform;
+}
+
+.icon:hover, icon:active {
+  transform: scale(1.5);
+}
+
+.social-networks-icons {
+  align-self: flex-end;
+}
+
+.social-networks__item {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 20px;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.flowers-preview {
+  margin-left: 230px;
+  margin-right: 120px;
+}

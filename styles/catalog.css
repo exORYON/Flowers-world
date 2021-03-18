@@ -1,0 +1,60 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 125px);
+}
+
+main h1 {
+  letter-spacing: 0.15em;
+  font-weight: normal;
+  color: rgba(28, 87, 19, 0.705);
+}
+
+.card {
+  width: 255px;
+  height: 400px;
+  border: 1px solid #1C5713;
+  margin: 0 25px;
+}
+
+.card__image {
+  width: 100%;
+  cursor: pointer;
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.card__description {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.card__info img {
+  margin-right: 10px;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+
+.card__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.card__price {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(28, 87, 19, 0.58);
+}
