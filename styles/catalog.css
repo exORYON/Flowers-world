@@ -3,7 +3,7 @@ main {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 125px);
+  min-height: calc(100vh - 125px);
 }
 
 main h1 {
@@ -57,4 +57,12 @@ main h1 {
   font-size: 14px;
   line-height: 17px;
   color: rgba(28, 87, 19, 0.58);
+}
+
+.cards {
+  margin: 25px 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2vw;
 }

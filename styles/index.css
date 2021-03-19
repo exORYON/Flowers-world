@@ -39,7 +39,6 @@ main {
   width: 230px;
   height: 75px;
   border: 2px solid #1C5713;
-  background-color: #fff;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -49,6 +48,15 @@ main {
   color: #1C5713;
   cursor: pointer;
   position: relative;
+  transition: 1s ease;
+  background: linear-gradient(to right, #2ba0191e 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.middle__button:hover {
+  background-color: #1c57131e;
+  background-position: left bottom;
 }
 
 .middle__button::after {

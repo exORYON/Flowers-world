@@ -1,13 +1,19 @@
-const data = fetch(
-  "https://my-json-server.typicode.com/FacelessWanderer/flowers/stock"
-)
-  .then((res) => res.json())
-  .then((data) => {
-    console.log(data);
-    renderItems(data);
-  });
+(function loadItems() {
+  fetch("https://my-json-server.typicode.com/FacelessWanderer/flowers/stock")
+    .then((res) => res.json())
+    .then((data) => {
+      renderItems(data);
+    })
+    .catch(err => {
+      console.log(err);
+      output.innerHTML = `<h1>Sorry, try again later...</h1>
+      <h5>We will try to load items again in 1.5s</h5>`;
+      setTimeout(loadItems, 1500);
+    })
+})()
 
-const output = document.querySelector(".main");
+
+const output = document.querySelector(".cards");
 
 function renderItems(items) {
   output.innerHTML = "";
